@@ -57,6 +57,7 @@ h3 {
 }
 .page-header-row { 
   display: flex; 
+  flex-wrap: wrap;
   justify-content: space-between; 
   align-items: center; 
   margin-bottom: 28px; 
@@ -308,4 +309,77 @@ h3 {
   font-size: 12px; 
   font-weight: 600;
   border: 1px solid #fef3c7;
+}
+
+/* ── Global Responsive Breakpoints ── */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .page-container {
+    padding: 32px 20px;
+  }
+}
+
+/* Mobile (large) */
+@media (max-width: 767px) {
+  .page-container {
+    padding: 24px 16px;
+  }
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; margin-bottom: 12px; }
+  h3 { font-size: 16px; }
+
+  .page-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .loading-text,
+  .empty-state {
+    padding: 40px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (small) */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 16px 12px;
+  }
+  h1 { font-size: 20px; }
+  h2 { font-size: 17px; }
+
+  .btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+  .btn-full {
+    padding: 11px;
+  }
+  .skills-wrap {
+    gap: 4px;
+  }
+  .skill-tag,
+  .cert-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+  .status-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+  .error-box,
+  .success-box,
+  .info-box,
+  .alert-box {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
 }

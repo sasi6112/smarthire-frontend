@@ -153,13 +153,58 @@
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-@media(max-width:640px) {
+/* ── Jobs Responsive Breakpoints ── */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .jobs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Mobile (large) */
+@media (max-width: 767px) {
   .jobs-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 16px;
   }
+
+  .job-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .job-title { font-size: 16px; }
+  .job-desc  { font-size: 13px; }
 
   .filter-row {
     flex-direction: column;
     align-items: stretch;
   }
+  .filter-row select {
+    width: 100%;
+  }
+
+  .filters-box {
+    padding: 16px;
+  }
+
+  .company-job-actions {
+    flex-direction: column;
+  }
+  .company-job-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile (small) */
+@media (max-width: 480px) {
+  .job-card { padding: 14px; gap: 10px; }
+  .job-title { font-size: 15px; }
+  .job-tags span { font-size: 11px; padding: 3px 10px; }
+  .search-input { padding: 10px 14px; font-size: 13px; }
+  .filter-row select { padding: 8px 12px; font-size: 13px; }
 }

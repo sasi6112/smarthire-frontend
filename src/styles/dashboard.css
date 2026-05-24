@@ -255,3 +255,94 @@
   gap: 12px; 
   flex-wrap: wrap; 
 }
+
+/* ── Dashboard Responsive Breakpoints ── */
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .stats-row {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+  }
+  .stat-number { font-size: 32px; }
+  .action-buttons { gap: 12px; }
+  .action-btn {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (large) */
+@media (max-width: 767px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .stat-box {
+    padding: 18px;
+  }
+  .stat-number { font-size: 28px; }
+  .stat-label  { font-size: 12px; }
+
+  .application-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px;
+  }
+  .app-status {
+    text-align: left;
+    flex-shrink: unset;
+  }
+
+  .applicant-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+  }
+  .applicant-right {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .company-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+  }
+  .company-info { flex-wrap: wrap; }
+  .company-actions { width: 100%; }
+
+  .action-buttons { flex-direction: column; }
+  .action-btn { width: 100%; text-align: left; }
+
+  .filter-tabs { gap: 8px; }
+  .tab-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile (small) */
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stat-box { padding: 14px; }
+  .stat-number { font-size: 24px; }
+  .stat-label  { font-size: 11px; }
+
+  .applicant-left { flex-direction: column; }
+  .applicant-avatar { width: 40px; height: 40px; font-size: 16px; }
+
+  .company-avatar { width: 40px; height: 40px; font-size: 16px; }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
